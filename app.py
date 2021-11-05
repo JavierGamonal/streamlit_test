@@ -18,11 +18,7 @@ st.write(df2.head())
 
 df_plot=df2[['Year','Value','Country or Area']]
 
-c = alt.Chart(df_plot).mark_area(opacity=0.3).encode(
-    x='Year',
-    y='Value',
-    color='Country or Area'
-)
+c = alt.Chart(df_plot).mark_area(opacity=0.3).encode(x='Year',y='Value',color='Country or Area')
 
 st.altair_chart(c,use_container_width=True)
 
