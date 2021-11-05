@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as pandas
+import pandas as pd
 import altair as altair
 
 
