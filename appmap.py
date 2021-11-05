@@ -1,6 +1,5 @@
 import streamlit as st 
 import pandas as pd 
-!pip install pxmap
 import plotly.express as px
 from pxmap import px_static
 
