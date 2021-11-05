@@ -31,3 +31,7 @@ df2=df1[vals]
 
 with col1.expander('data'):
     st.dataframe(df2)
+
+
+if ("lat" in vals) and ("lon" in vals):
+    col3.map(df2)
