@@ -11,5 +11,5 @@ df = pd.read_csv(file_name)
 
 st.write(df)
 
-country_select= st.multiselect('Choose Countries',countries , default=['Chile','Mexico'])
+country_select= st.multiselect('Choose Countries', df , default=['Chile','Mexico'])
 
