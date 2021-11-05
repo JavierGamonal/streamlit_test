@@ -25,3 +25,6 @@ col1,col2,col3 = st.columns([5,1,5])
 with col1.expander('widgets'):
     year_range = st.slider('year range',year_min,year_max,[1800,1900],step = 10)
     vals=st.multiselect('',cols)
+
+df1=df[(df['year']>=year_range[0] ) & (df['year']<=year_range[1] )]
+df2=df1[vals]
