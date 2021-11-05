@@ -28,3 +28,6 @@ with col1.expander('widgets'):
 
 df1=df[(df['year']>=year_range[0] ) & (df['year']<=year_range[1] )]
 df2=df1[vals]
+
+with col1.expander('data'):
+    st.dataframe(df2)
