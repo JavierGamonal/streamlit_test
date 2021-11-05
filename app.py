@@ -15,7 +15,9 @@ country_select= st.multiselect('Choose Countries', df , default=['Chile','Mexico
 df2=df[df['Country or Area'].isin(country_select)] 
 st.subheader('Gross Production Index Number')
 st.write(df2.head())
+
 df_plot=df2[['Year','Value','Country or Area']]
+
 c = alt.Chart(df_plot).mark_area(opacity=0.3).encode(
     x='Year',
     y='Value',
