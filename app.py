@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import altair as altair
+import altair as alt
 
 
 st.title('DataFrame Demo')
