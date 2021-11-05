@@ -1,3 +1,8 @@
 import streamlit as st
 
-st.title('Streamlit en Colab :rocket:') 
+x=st.slider('select a value')
+st.write(x, 'squared is', x*x)
+st.sidebar.checkbox('Click me')
+
+st.button('Click')
+       
