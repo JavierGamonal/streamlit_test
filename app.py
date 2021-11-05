@@ -25,3 +25,7 @@ c = alt.Chart(df_plot).mark_area(opacity=0.3).encode(
 )
 
 st.altair_chart(c,use_container_width=True)
+
+if check:
+    text=open('app.py').read()
+    st.code(text,language='python')
