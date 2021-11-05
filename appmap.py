@@ -35,3 +35,12 @@ with col1.expander('data'):
 
 if ("lat" in vals) and ("lon" in vals):
     col3.map(df2)
+
+check=col1.checkbox('Save File')
+if check:
+    df2.to_csv('data.csv')
+    name=col1.text_input('*.csv file name:')
+    #check if name is not empty
+    if name:
+        with open('data.csv') as f:
+            col1.download_button('Download Data',f,file_name=name)
