@@ -6,3 +6,4 @@ st.sidebar.checkbox('Click me')
 
 st.button('Click')
        
+st.markdown(':+1:')
