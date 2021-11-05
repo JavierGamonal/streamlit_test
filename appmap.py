@@ -6,7 +6,7 @@ st.markdown('**Nota:** Esta aplicación sigue en desarrollo, cualquier bug repor
 
 filepath = 'https://raw.githubusercontent.com/napoles-uach/Pycon_cl_taller/main/meteorite-landings.csv'
 
-#st.cache
+st.cache
 def read_csv(file_path):
     df = pd.read_csv(file_path)
     return df
