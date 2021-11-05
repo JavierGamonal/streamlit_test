@@ -21,4 +21,7 @@ year_min=int(df['year'].min()) #identificamos el valor mínimo
 year_max=int(df['year'].max()) #identificamos el valor máximo
 cols=list(df.columns) # lista con nombres de columnas en el csv
 
-st.write(df)
+col1,col2,col3 = st.columns([5,1,5])
+with col1.expander('widgets'):
+    year_range = st.slider('year range',year_min,year_max,[1800,1900],step = 10)
+    vals=st.multiselect('',cols)
