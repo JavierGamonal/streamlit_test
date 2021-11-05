@@ -20,3 +20,5 @@ df=df[abs(df['lat'])>0]  #evitar algunos valores incompletos
 year_min=int(df['year'].min()) #identificamos el valor mínimo
 year_max=int(df['year'].max()) #identificamos el valor máximo
 cols=list(df.columns) # lista con nombres de columnas en el csv
+
+st.write(df)
