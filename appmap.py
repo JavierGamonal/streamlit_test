@@ -1,7 +1,6 @@
 import streamlit as st 
 import pandas as pd 
-import plotly.express as px
-from pxmap import px_static
+
 
 st.title('AppMap')
 st.markdown('Esta es una aplicación simple para ayudarte a visualizar mapas')
