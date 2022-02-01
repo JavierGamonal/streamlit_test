@@ -29,7 +29,7 @@ cols=list(df.columns) # lista con nombres de columnas en el csv
 
 col1,col2,col3 = st.columns([5,1,5])
 with col1.expander('Caracteristicas:'):
-    year_range = st.slider('year range',year_min,year_max,[1800,1900],step = 10)
+    year_range = st.slider('Rango de años',year_min,year_max,[1800,1900],step = 10)
     vals=st.multiselect('',cols)
 
 df1=df[(df['year']>=year_range[0] ) & (df['year']<=year_range[1] )]
@@ -42,11 +42,11 @@ with col1.expander('Datos pedidos:'):
 if ("lat" in vals) and ("lon" in vals):
     col3.map(df2)
 
-check=col1.checkbox('Save File')
+check=col1.checkbox('Guardar Archivo')
 if check:
     df2.to_csv('data.csv')
     name=col1.text_input('*.csv file name:')
     #check if name is not empty
     if name:
         with open('data.csv') as f:
-            col1.download_button('Download Data',f,file_name=name)
+            col1.download_button('Descargar',f,file_name=name)
