@@ -1,5 +1,6 @@
 import streamlit as st 
 import pandas as pd 
+import webbrowser
 
 
 st.title('Mapa de caida de meteoritos')
