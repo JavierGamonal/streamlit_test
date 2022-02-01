@@ -14,7 +14,10 @@ def read_csv(file_path):
     return df
 
 df = read_csv(filepath)
-st.button('click')
+boton = st.button('click')
+url = "www.google.cl "
+if boton:
+    webbrowser.open_new_tab(url)
 
 df=df[(df['mass']>0 )] #evitar algunos valores incompletos
 df=df[abs(df['lat'])>0]  #evitar algunos valores incompletos
