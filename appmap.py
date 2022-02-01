@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd 
 
 
-st.title('AppMap')
-st.markdown('Esta es una aplicación simple para ayudarte a visualizar mapas')
-st.markdown('**Nota:** Esta aplicación sigue en desarrollo, cualquier bug reportarlo a [@napoles3D](https://twitter.com/napoles3D)')
+st.title('Mapa de caida de meteoritos')
+st.markdown('Pequeño proyecto de prueba para probar Streamlit :)')
+st.markdown('Cualquier duda contactarme a jgamonal2016@udec.cl ')
 
 filepath = 'https://raw.githubusercontent.com/napoles-uach/Pycon_cl_taller/main/meteorite-landings.csv'
 
@@ -24,7 +24,7 @@ year_max=int(df['year'].max()) #identificamos el valor máximo
 cols=list(df.columns) # lista con nombres de columnas en el csv
 
 col1,col2,col3 = st.columns([5,1,5])
-with col1.expander('widgets'):
+with col1.expander('Caracteristicas'):
     year_range = st.slider('year range',year_min,year_max,[1800,1900],step = 10)
     vals=st.multiselect('',cols)
 
