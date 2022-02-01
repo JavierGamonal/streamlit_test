@@ -24,14 +24,14 @@ year_max=int(df['year'].max()) #identificamos el valor máximo
 cols=list(df.columns) # lista con nombres de columnas en el csv
 
 col1,col2,col3 = st.columns([5,1,5])
-with col1.expander('Caracteristicas'):
+with col1.expander('Caracteristicas:'):
     year_range = st.slider('year range',year_min,year_max,[1800,1900],step = 10)
     vals=st.multiselect('',cols)
 
 df1=df[(df['year']>=year_range[0] ) & (df['year']<=year_range[1] )]
 df2=df1[vals]
 
-with col1.expander('data'):
+with col1.expander('Datos pedidos:'):
     st.dataframe(df2)
 
 
